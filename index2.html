@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta name="viewport" content="width= device - width, initial-scale=1.0">
+    <title>DOM Selection and Manipulation</title>
+    <style>
+      body{
+        font-family : Arial , sans-serif;
+        text-align : center;
+        margin-top : 50 px;
+      }
+      .highlight{
+        color : blue;
+        font-weight : bold;
+      }
+      .box{
+        padding :15 px;
+        margin : 10px auto;
+        width : 50 %;
+        border: 2px solid #ccc;
+        border-radius :5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="main"> welcome to javascript DOM </h1>
+    <div class="box">
+      <p class="text"> this is the first paragraph.</p>
+      <p class="text"> this is the Second paragraph.</p>
+    </div>
+    <button id="manipulate-btn"> manipulate elements</button>
+    <script>
+      const heading=document.getElementById("main-heading");
+      const button=document.getElementById("manipulate-btn");
+      const paragraphs=document.querySelectorAll("text");
+      button.addEventListener("click",function(){
+        heading.textContent="DOM manipulation successful!";
+        paragraphs.forEach((p,index)=>{
+          p.textContent='Paragraph $ {index+1} has been updated!';
+          p.classlist.add("highlight");
+        });                                           
+    </script>
+  </body>
+</html>
