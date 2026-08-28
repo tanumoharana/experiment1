@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Simple event listener</title>
+  </head>
+  <body>
+    <h2> Event Listener Example</h2>
+    <button id="btn">Click Here</button>
+    <p id="msq">Hello, world!</p>
+    <script>
+      const button=document.getElementById("btn");
+      const message=document.getElementById("msg");
+      button.addEventListener("click",function(){
+        message.textContent="Button was clicked Successfully!";
+      });
+    </script>
+  </body>
+</html>
