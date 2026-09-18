@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Types of functions in javascript</title>
+    <style>
+      body{
+        font-family : Arial, sans-serif;
+        margin :40 px;
+        background-color : #f9f9f9;
+      }
+      .container{
+        background : white;
+        padding : 25 px;
+        border-radius : 8 px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        max-width:500px;
+      }
+      p{
+        font-size: 16 px;
+        color:#333;
+        line-height:1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Javascript function types demo</h2>
+      <p id="output1"></p>
+      <p id="output2"></p>
+      <p id="output3"></p>
+    </div>
+    <script>
+      function addnumbers(a,b){
+        return a+b;
+      }
+      const multiplynumbers=function(a,b){
+        return a*b;
+      }; 
+      const squarenumbers=(n)=>{
+        return n*n;
+      }; 
+      document.getElementById("output1").textContent="1. function Declaration(5+3)=" + addnumbers(5,3); 
+      document.getElementById("output2").textContent="2. function expression(4*5)=" + multiplynumbers(4,5); 
+      document.getElementById("output3").textContent="3. Arrow function (Square of 6)=" + squarenumbers(6); 
+    </script>
+  </body>
+</html>
