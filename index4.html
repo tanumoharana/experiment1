@@ -3,43 +3,47 @@
     <title>Button click Events Handler</title>
     <style>
       body{
-        font-family: Arial,ans-serif;
-        margin:40px;
+        font-family: Arial, sans-serif;
+        margin: 40px;
       }
       button{
-        padding :10px 20px;
-        font-size :16px;
-        margin-right :10px;
-        cursor : pointer;
-        background-color :#4CAF50;
-        color : white;
-        border : none:
-        border-radius : 4px;
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-right: 10px;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
       }
       button:hover{
-        background-color:#45a049;
+        background-color: #45a049;
       }
       #output{
-        margin-top : 20px;
-        font-size:18px;
-        font-weight:bold;
-        color:#333;
-        }
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
     </style>
   </head>
   <body>
-    <h2>multiple Button Click Events</h2>
+    <h2>Multiple Button Click Events</h2>
     <button class="action-btn">Button A</button>
     <button class="action-btn">Button B</button>
-    <button class="action-btn">button</button>
+    <button class="action-btn">Button C</button>
     <p id="output">Status: click any button above.</p>
+    
     <script>
-      const buttons=document.querySelectorAll('.action-btn');
-      const OutputText=document.getElementId('output');
-      buttons.ForEach(function(button){
-        button.addEventListener('click',function(event){
-          const clickedButtonName=event.target.textContent;
-          outputText.text
+      const buttons = document.querySelectorAll('.action-btn');
+      const outputText = document.getElementById('output');
+      
+      buttons.forEach(function(button){
+        button.addEventListener('click', function(event){
+          const clickedButtonName = event.target.textContent;
+          outputText.textContent = `Status: You clicked ${clickedButtonName}`;
+        });
+      });
     </script>
   </body>
 </html>
